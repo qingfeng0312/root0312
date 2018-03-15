@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.xbd.Dao.stuDao">
+	<resultMap id="BaseResultMap" type="com.xbd.Entity.student">
+		<id column="stu_id" property="stuId" jdbcType="BIGINT" />
+		<result column="stu_name" property="stuName" jdbcType="VARCHAR" />
+		<result column="stu_sex" property="stuSex" jdbcType="VARCHAR" />
+		<result column="stu_age" property="stuAge" jdbcType="INTEGER" />
+		<result column="stu_address" property="stuAddress" jdbcType="VARCHAR" />
+		<result column="stu_phone" property="stuPhone" jdbcType="VARCHAR" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		stu_id,stu_name,stu_sex,stu_age,stu_address,stu_phone
+	</sql>
+	<insert id="insertStu" parameterType="com.xbd.Entity.student">
+		insert into test_stu
+		(stu_name,stu_sex,stu_age,stu_address,stu_phone)
+		values (#{stuName,jdbcType=VARCHAR},
+		#{stuSex,jdbcType=VARCHAR},
+		#{stuAge,jdbcType=INTEGER},
+		#{stuAddress,jdbcType=VARCHAR},
+		#{stuPhone,jdbcType=VARCHAR})
+	</insert>
+	<select id="selectStu" resultMap="BaseResultMap" parameterType="com.xbd.Entity.student">
+		select
+		<include refid="Base_Column_List" />
+		from test_stu
+	</select>
+	<delete id="deleteStu" parameterType="com.xbd.Entity.student">
+	delete from test_stu
+		where stu_id = #{stuId,jdbcType=INTEGER}
+	</delete>
+	<select id="oneStu" resultMap="BaseResultMap" parameterType="com.xbd.Entity.student">
+		select
+		<include refid="Base_Column_List" />
+		from test_stu
+		where stu_id = #{stuId,jdbcType=BIGINT}
+
+	</select>
+	<update id="updateStu" parameterType="com.xbd.Entity.student">
+		update test_stu
+		set
+		stu_name=#{stuName,jdbcType=VARCHAR},
+		stu_sex=#{stuSex,jdbcType=VARCHAR},
+		stu_age=#{stuAge,jdbcType=INTEGER},
+		stu_address=#{stuAddress,jdbcType=VARCHAR},
+		stu_phone=#{stuPhone,jdbcType=VARCHAR}
+		where stu_id = #{stuId,jdbcType=BIGINT}
+	</update>
+
+</mapper>

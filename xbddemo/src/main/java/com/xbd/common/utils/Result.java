@@ -2,7 +2,8 @@ package com.xbd.common.utils;
 
 
 /**
- * Created by zhaohong on 2017/9/19.
+ * @author hehuannan
+ * @since 2018-03-16
  */
 public class Result<T> {
 

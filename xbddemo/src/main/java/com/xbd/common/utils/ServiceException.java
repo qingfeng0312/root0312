@@ -4,9 +4,9 @@ import java.text.MessageFormat;
 
 
 /**
+ * @author hehuannan
+ * @since 2018-03-16
  * 类说明：业务检查异常类
- * @author liyufu
- * @version 1.0
  */
 public class ServiceException extends RuntimeException{
 	private static final long serialVersionUID = 1L;
@@ -17,9 +17,9 @@ public class ServiceException extends RuntimeException{
     }
     
     public ServiceException(String code) {
-        super(PropertiesUtils.getErrorCode(code));
+      //  super(PropertiesUtils.getErrorCode(code));
         this.code = code;
-        this.msg = PropertiesUtils.getErrorCode(code);
+      //  this.msg = PropertiesUtils.getErrorCode(code);
     }
     
     public ServiceException(Throwable cause) {
@@ -28,15 +28,15 @@ public class ServiceException extends RuntimeException{
     
     
     public ServiceException(String code,Throwable e){
-		super(PropertiesUtils.getErrorCode(code), e);
+		//super(PropertiesUtils.getErrorCode(code), e);
 		this.code = code;
-		this.msg = PropertiesUtils.getErrorCode(code);
+		//this.msg = PropertiesUtils.getErrorCode(code);
 	}
     
     public ServiceException(String code,Throwable e,Object... args){
-		super(MessageFormat.format(PropertiesUtils.getErrorCode(code), args), e);
+		//super(MessageFormat.format(PropertiesUtils.getErrorCode(code), args), e);
 		this.code = code;
-		this.msg = PropertiesUtils.getErrorCode(code);
+		//this.msg = PropertiesUtils.getErrorCode(code);
 		this.msg = MessageFormat.format(this.msg, args);
 	}
 

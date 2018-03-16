@@ -1,5 +1,9 @@
 package com.xbd.common.utils;
 
+/**
+ * @author hehuannan
+ * @since 2018-03-16
+ */
 public class DataConstants {
 	
 	public static final String SQL_INSERT = "insert";

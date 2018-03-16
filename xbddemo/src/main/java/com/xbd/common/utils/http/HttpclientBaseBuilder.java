@@ -22,8 +22,10 @@ import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 /**
+ * @author hehuannan
+ * @since 2018-03-16
+ * @desc 设置Http 
  * 同时支持http,https(信任所有证书,不进行域名校验)双协议,采用连接池管理,在并发情况下效果会好一些
- * 
  * @author duan
  * ps : PoolingHttpClientConnectionManager和CloseableHttpClient:ThreadSafe, HttpPost:NotThreadSafe
  */

@@ -5,6 +5,10 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 
+/**
+ * @author hehuannan
+ * @since 2018-03-16
+ */
 public abstract class BaseDao<T> extends SqlSessionDaoSupport {
 	/**
 	 * 注入SqlSessionTemplate实例(要求Spring中进行SqlSessionTemplate的配制)

@@ -26,6 +26,12 @@ import java.io.UnsupportedEncodingException;
 import java.net.SocketTimeoutException;
 import java.util.Map;
 
+/**
+ * @author hehuannan
+ * @since 2018-03-16
+ * @desc 设置Http 
+ */
+
 public class HttpUtils extends HttpclientBaseConfig {
   private static final Logger log = LoggerFactory.getLogger(HttpUtils.class);
 

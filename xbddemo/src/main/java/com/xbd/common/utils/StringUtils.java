@@ -11,6 +11,10 @@ import net.sourceforge.pinyin4j.format.HanyuPinyinOutputFormat;
 import net.sourceforge.pinyin4j.format.HanyuPinyinToneType;
 import net.sourceforge.pinyin4j.format.exception.BadHanyuPinyinOutputFormatCombination;
 
+/**
+ * @author hehuannan
+ * @since 2018-03-16
+ */
 public class StringUtils {
 	/**
 	 * 对字符串左补充目标串

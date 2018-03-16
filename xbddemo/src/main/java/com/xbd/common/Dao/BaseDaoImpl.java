@@ -2,7 +2,10 @@ package com.xbd.common.Dao;
 
 import com.xbd.common.utils.DataConstants;
 
-
+/**
+ * @author hehuannan
+ * @since 2018-03-16
+ */
 public class BaseDaoImpl<T> extends BaseDao<T> {
 	@Override
 	public int deleteByPK(T record) {

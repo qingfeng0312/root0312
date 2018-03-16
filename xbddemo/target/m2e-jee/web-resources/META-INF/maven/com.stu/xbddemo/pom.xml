@@ -68,7 +68,12 @@
 			<artifactId>spring-context-support</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-
+        <!-- <dependency>
+			<groupId>aweb-com</groupId>
+			<artifactId>aweb-com</artifactId>
+			<version>1.4</version>
+		</dependency> -->
+		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -118,7 +123,11 @@
 			<version>${log4j.version}</version>
 		</dependency>
 
-
+        <dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.29</version>
+		</dependency>
 		<!-- 格式化对象，方便输出日志 -->
 		<dependency>
 			<groupId>com.alibaba</groupId>

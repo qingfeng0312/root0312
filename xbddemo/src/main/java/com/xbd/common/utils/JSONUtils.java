@@ -4,6 +4,11 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 
+/**
+ * @author hehuannan
+ * @since 2018-03-16
+ * @desc 设置Http 
+ */
 public class JSONUtils {
 
 	public static <T> T jsonStrToBean(String jsonStr, Class<T> beanClass) {

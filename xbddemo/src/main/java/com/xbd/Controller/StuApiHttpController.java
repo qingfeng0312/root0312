@@ -1,7 +1,10 @@
 package com.xbd.Controller;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -18,10 +21,13 @@ import com.mysql.fabric.xmlrpc.base.Array;
 import com.xbd.Entity.student;
 import com.xbd.Service.stuService;
 import com.xbd.common.Constant;
+import com.xbd.common.utils.JSONUtils;
+import com.xbd.common.utils.PropertiesUtils;
 import com.xbd.common.utils.Result;
+import com.xbd.common.utils.http.HttpclientUtil;
 
 @Controller
-@RequestMapping(value = "/stu")
+@RequestMapping(value = "/student")
 public class StuApiHttpController {
 
 	private Log LOG = LogFactory.getLog(this.getClass());
@@ -36,10 +42,10 @@ public class StuApiHttpController {
 	    return new ModelAndView("index");
 	  }
 	 
-	@ResponseBody
-    @RequestMapping(value = "/stuInfo")
-    public Result saveEntrusGoodsInfo(HttpServletRequest request) {
-        Result<List<student>> reslut = new Result<List<student>>();
+	//@ResponseBody
+    @RequestMapping(value = "/stuInfo1")
+    public String saveEntrusGoodsInfo(HttpServletRequest request) {
+       /* Result<List<student>> reslut = new Result<List<student>>();
         LOG.info("接口");
         student reen = new student();
         reen.setStuAge(34);
@@ -48,8 +54,29 @@ public class StuApiHttpController {
         list.add(reen);
         reslut.setCode(Constant.JUDGE_CODE_ZERO);
         reslut.setMsg("接口名称");
-        reslut.setData(list);
-        return reslut;
+        reslut.setData(list);*/
+        return "gdhgd";
     }
-
+	
+	
+	  @RequestMapping(value = "/myAskToBuy")
+	  @ResponseBody
+	  public Object myAskToBuy(HttpServletRequest request) {
+	    Map<String, Object> resMap = new HashMap<String, Object>();
+	   
+	    Map<String, String> paramMap = new HashMap<String, String>();
+	   
+	    String scUrl = PropertiesUtils.getProperty("xbd.url");
+	    scUrl += "/stu/stuInfo.do";
+	    String data = "";
+	    Map purchaseMap = null;
+	    try {
+	      data = HttpclientUtil.postForm(scUrl,paramMap);
+	      purchaseMap = JSONUtils.jsonStrToBean(data, Map.class);
+	    } catch (Exception e) {
+	      e.printStackTrace();
+	    }
+	    List purchaseList = (List) purchaseMap.get("data");
+	    return resMap;
+	  }
 }

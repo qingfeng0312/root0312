@@ -17,6 +17,11 @@ import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.log4j.Logger;
 
+/**
+ * @author hehuannan
+ * @since 2018-03-16
+ * @desc 设置Http 
+ */
 public class HttpclientBaseConfig extends HttpclientBaseBuilder {
 	private static final Logger log = Logger
 			.getLogger(HttpclientBaseConfig.class);
@@ -28,8 +33,9 @@ public class HttpclientBaseConfig extends HttpclientBaseBuilder {
 	protected static final Integer HTTP_CLIENT_SOCKET_TIME_OUT = 120000;
 
 	/**
-	 * 设置Http Request请求配置信息
-	 * 
+	 * @author hehuannan
+	 * @since 2018-03-16
+	 * @desc 设置Http Request请求配置信息
 	 * @param connectTimeout
 	 * @param socketTimeout
 	 * @return
@@ -57,7 +63,7 @@ public class HttpclientBaseConfig extends HttpclientBaseBuilder {
 	}
 
 	/**
-	 * 设置请求参数
+	 * @desc 设置请求参数
 	 * 
 	 * @param params
 	 * @return

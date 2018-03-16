@@ -20,6 +20,11 @@ import org.apache.log4j.Logger;
 import com.xbd.common.utils.ServiceException;
 import com.xbd.common.utils.StringUtils;
 
+/**
+ * @author hehuannan
+ * @since 2018-03-16
+ * @desc 设置Http 
+ */
 public class HttpclientUtil extends HttpclientBaseConfig {
 	private static final Logger log = Logger
 			.getLogger(HttpclientBaseBuilder.class);

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="xbddemo"
+  id="myeclipse.1521017192566"
+  context-root="/xbddemo"
+  j2ee-spec="6.0"
+  archive="xbddemo.war">
+  <attributes>
+    <attribute name="webrootdir" value="src/main/webapp" />
+  </attributes>
+</project-module>
+

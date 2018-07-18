@@ -1,5 +1,5 @@
 package com.xbd.Entity;
-
+//ceshi
 public class student {
   private int stuId;
   private String stuName;
